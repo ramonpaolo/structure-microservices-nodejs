@@ -1,0 +1,78 @@
+version: "3.8"
+
+services:
+  books:
+    build: 
+      context: .
+      dockerfile: ./services/books/docker/books.dockerfile
+    image: r4deu51/books_service
+    container_name: books_service
+    ports:
+      - "3000"
+    env_file:
+      - ./services/books/.env
+    networks:
+      - network_structure
+    restart: always
+  
+  authentication:
+    build: 
+      context: .
+      dockerfile: ./services/authentication/docker/authentication.dockerfile
+    image: r4deu51/authentication_service
+    container_name: authentication_service
+    ports:
+      - "3000"
+    env_file:
+      - ./services/authentication/.env
+    networks:
+      - network_structure
+    restart: always
+
+  checkout:
+    build: 
+      context: .
+      dockerfile: ./services/checkout/docker/checkout.dockerfile
+    image: r4deu51/checkout_service
+    container_name: checkout_service
+    ports:
+      - "3000"
+    env_file:
+      - ./services/checkout/.env
+    networks:
+      - network_structure
+    restart: always
+
+  user:
+    build: 
+      context: .
+      dockerfile: ./services/user/docker/user.dockerfile
+    image: r4deu51/user_service
+    container_name: user_service
+    ports:
+      - "3000"
+    env_file:
+      - ./services/user/.env
+    networks:
+      - network_structure
+    restart: always
+
+  nginx:
+    build: 
+      context: .
+      dockerfile: ./services/nginx/docker/nginx.dockerfile
+    image: r4deu51/nginx_service
+    container_name: nginx_service
+    ports:
+      - "80:80"
+    networks:
+      - network_structure
+    depends_on:
+      - user
+      - books
+      - authentication
+      - checkout
+    restart: always
+
+networks:
+  network_structure:  
