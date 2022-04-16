@@ -38,8 +38,19 @@ Anyone interested in starting a project focused on microservices, can use this r
 
 <div id="howexecute-english" />
 
-## How execute?
-To run, execute the command: `docker-compose -f docker-compose.yaml up --build`
+## 📁 How execute?
+Requirements: NodeJs 14.17 LTS and Docker
+
+```bash
+# clone repositore
+$ git clone https://github.com/ramonpaolo/structure-microservices-nodejs
+
+# enter inside the folder/project
+$ cd structure-microservices-nodejs/
+
+# build and run application:
+$ docker-compose -f docker-compose.yaml up --build
+```
 
 <div id="alreadytocloud-english" />
 
@@ -126,14 +137,24 @@ Esse projeto é sobre estrutura de pastas e arquivos de um e-commerce usando arq
 
 <div id="whocanuse-portuguese" />
 
-
 ## Quem pode usar?
 Qualquer pessoa que tenha interesse em iniciar algum projeto focado em microservices, poderá usar esse repositório como um guia base, para saber como funciona a estrutra de pastas e arquivos usando NodeJs
 
 <div id="howexecute-portuguese" />
 
-## Como executar?
-Para rodar, basta executar o comando: `docker-compose -f docker-compose.yaml up --build`
+## 📁 Como executar?
+Requisitos: NodeJs 14.17 LTS e Docker
+
+```bash
+# clone o repositório
+$ git clone https://github.com/ramonpaolo/structure-microservices-nodejs
+
+# entre dentro da pasta pasta/projeto
+$ cd structure-microservices-nodejs/
+
+# build e rode a aplicação:
+$ docker-compose -f docker-compose.yaml up --build
+```
 
 <div id="alreadytocloud-portuguese" />
 
@@ -188,3 +209,7 @@ Bom, nós podemos fazer a ligação usando chamadas APIs, usando o axios por exe
 --- 
 ## Como juntas os serviços em apenas um só, para fazer a ligação de rotas?
 Podemos fazer isso, programaticamente, usando o express, para fazer um proxy programaticamente, ou podemos utilizar o nginx para isso, que é o nosso caso. Junto com o proxy, também está sendo feito um load balancing(balanceador de carga).
+
+![GitHub top language](https://img.shields.io/github/languages/top/ramonpaolo/structure-microservices-nodejs)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ramonpaolo/structure-microservices-nodejs)
+![GitHub](https://img.shields.io/github/license/ramonpaolo/structure-microservices-nodejs)
