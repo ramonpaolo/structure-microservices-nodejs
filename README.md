@@ -1,4 +1,4 @@
-## Indice Languages Translates
+## Languages Translates
 - [Portuguese](#portuguese)
 - [English](#english)
 
